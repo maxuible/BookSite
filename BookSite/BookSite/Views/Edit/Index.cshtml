@@ -1,7 +1,10 @@
-﻿@model BookSite.ViewModels.AddBookViewModel
+﻿@model BookSite.Models.Book
 
 
-<form asp-controller="Home" asp-action="ProcessAddBook" method="post">
+
+
+
+<form asp-controller="Edit" asp-action="ProcessEditBook" method="post">
 
     <div class="form-group">
 
@@ -63,8 +66,6 @@
         <span asp-validation-for="Url"></span>
 
     </div>
-
-    
 
 
 

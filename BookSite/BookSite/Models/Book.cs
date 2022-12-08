@@ -17,6 +17,8 @@
 
         public string Url { get; set; }
 
+        public int Status { get; set; }
+
         public Book() { }
 
         public Book(string title, string description, string author, string isbn, string type, string url)
@@ -27,6 +29,7 @@
             Isbn = isbn;
             Type = type;
             Url = url;
+            Status = 0;
         }
 
 

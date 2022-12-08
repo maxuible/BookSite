@@ -1,0 +1,26 @@
+﻿@model List<BookSite.Models.Book>
+
+
+@if (Model.Count == 0)
+{
+    <p>No Books In List</p>
+}
+else
+{
+    <div>
+        <ul>
+            @foreach (Book book in Model)
+            {
+                <li>
+                    @book.Title
+                    <a asp-controller="List" asp-action="Details" asp-route-id="@book.Id">@book.Title</a>
+                </li>
+            }
+
+        </ul>
+
+
+
+
+    </div>
+}

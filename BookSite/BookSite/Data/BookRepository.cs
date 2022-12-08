@@ -8,8 +8,9 @@ namespace BookSite.Data
     public interface IBookRepository
     {
         IEnumerable<Book> GetAllBooks();
-
         void SaveChanges();
+        void AddNewBook(Book newBook);
+        Book GetBookById(int id);
     }
 
 
@@ -43,5 +44,11 @@ namespace BookSite.Data
         {
             _context.Books.Add(newBook);
         }
+
+        public virtual Book GetBookById(int id)
+        {
+            return _context.Books.Find(id);
+        }
+
     }
 }

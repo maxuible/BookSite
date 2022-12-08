@@ -48,9 +48,11 @@ namespace BookSite.Controllers
                 _repo.AddNewBook(book);
 
                 _repo.SaveChanges();
+                return Redirect("/List");
+                
             }
 
-            return View("Index");
+            return View("AddBook", addBookViewModel);
         }
 
         public IActionResult Privacy()

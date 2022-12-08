@@ -50,3 +50,6 @@ C:\Users\localuser1\Desktop\BookSite\BookSite\BookSite\obj\Debug\netcoreapp3.1\B
 C:\Users\localuser1\Desktop\BookSite\BookSite\BookSite\obj\Debug\netcoreapp3.1\BookSite.pdb
 C:\Users\localuser1\Desktop\BookSite\BookSite\BookSite\obj\Debug\netcoreapp3.1\BookSite.genruntimeconfig.cache
 C:\Users\localuser1\Desktop\BookSite\BookSite\BookSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddBook.cshtml.g.cs
+C:\Users\localuser1\Desktop\BookSite\BookSite\BookSite\obj\Debug\netcoreapp3.1\Razor\Views\List\Index.cshtml.g.cs
+C:\Users\localuser1\Desktop\BookSite\BookSite\BookSite\obj\Debug\netcoreapp3.1\Razor\Views\List\Details.cshtml.g.cs
+C:\Users\localuser1\Desktop\BookSite\BookSite\BookSite\obj\Debug\netcoreapp3.1\Razor\Views\Edit\Index.cshtml.g.cs
