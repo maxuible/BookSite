@@ -33,5 +33,17 @@
         }
 
 
+        public Book(int id, string title, string description, string author, string isbn, string type, string url)
+        {
+            Id = id;
+            Title = title;
+            Description = description;
+            Author = author;
+            Isbn = isbn;
+            Type = type;
+            Url = url;
+            Status = 0;
+        }
+
     }
 }
