@@ -42,9 +42,6 @@ namespace BookSite.Controllers
 
             return View("AddBook", addBookViewModel);
 
-
-            
-
         }
     }
 }
