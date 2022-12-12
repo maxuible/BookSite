@@ -12,6 +12,8 @@ namespace BookSite.Data
         void AddNewBook(Book newBook);
         Book GetBookById(int id);
         void EditBookById(Book newEdit, int id);
+
+        void DeleteBookById(int bookId);
     }
 
 
@@ -54,14 +56,6 @@ namespace BookSite.Data
         public virtual void EditBookById(Book newEdit, int id)
         {
             Book oldEdit = _context.Books.Find(id);
-
-
-
-
-
-
-
-
             oldEdit.Title = newEdit.Title;
             oldEdit.Description = newEdit.Description;
             oldEdit.Author = newEdit.Author;
@@ -70,21 +64,12 @@ namespace BookSite.Data
             oldEdit.Url = newEdit.Url;
             oldEdit.Status = newEdit.Status;
 
+        }
 
-            //if (testEdit!= null)
-            //{
-            //    testEdit.Title = "zxcv";
-            //}
+        public virtual void DeleteBookById(int bookId)
+        {
+            _context.Remove(_context.Books.Find(bookId));
 
-
-
-
-
-            
-            //_context.Books.
-            //Book oldEdit = GetBookById(newEdit.Id);
-            //_context.Books.Remove(oldEdit);
-            //_context.Books.Add(newEdit);
         }
 
     }

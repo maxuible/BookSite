@@ -8,13 +8,37 @@
 else
 {
     <div>
+        <h1>Books To Read</h1>
         <ul>
             @foreach (Book book in Model)
             {
-                <li>
-                    @book.Title
-                    <a asp-controller="List" asp-action="Details" asp-route-id="@book.Id">@book.Title</a>
-                </li>
+                @if (book.Status == 0)
+                {
+                    <li>
+
+
+                        <a asp-controller="List" asp-action="Details" asp-route-id="@book.Id">@book.Title</a> --- By: @book.Author
+                    </li>
+                }
+            }
+
+        </ul>
+
+    </div>
+
+    <div>
+        <h1>Books Read</h1>
+        <ul>
+            @foreach (Book book in Model)
+            {
+                @if (book.Status == 1)
+                {
+                    <li>
+
+
+                        <a asp-controller="List" asp-action="Details" asp-route-id="@book.Id">@book.Title</a> --- By: @book.Author
+                    </li>
+                }
             }
 
         </ul>

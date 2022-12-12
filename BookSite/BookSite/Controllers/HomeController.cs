@@ -42,7 +42,7 @@ namespace BookSite.Controllers
             {
 
                 Book book = new Book(addBookViewModel.Title, addBookViewModel.Description, addBookViewModel.Author,
-                    addBookViewModel.Isbn, addBookViewModel.Type, addBookViewModel.Url);
+                    addBookViewModel.Isbn, addBookViewModel.Type, addBookViewModel.Url, addBookViewModel.Status);
 
 
                 _repo.AddNewBook(book);

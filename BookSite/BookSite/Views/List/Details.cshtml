@@ -3,6 +3,20 @@
 
 
 
-<h1>@Model.Title</h1>
+<h1>TITLE : @Model.Title</h1>
+<h2>AUTHOR : @Model.Author</h2>
+@if(Model.Status == 0)
+    {
+    <p>STATUS : not read</p>
+}
+else
+{
+    <p>STATUS : read</p>
+}
+
 
 <a asp-controller="Edit" asp-action="Index" asp-route-id="@Model.Id">EDIT</a>
+
+<br />
+
+<a asp-controller="Edit" asp-action="Delete" asp-route-id="@Model.Id">DELETE</a>

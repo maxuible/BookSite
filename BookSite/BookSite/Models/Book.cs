@@ -21,7 +21,7 @@
 
         public Book() { }
 
-        public Book(string title, string description, string author, string isbn, string type, string url)
+        public Book(string title, string description, string author, string isbn, string type, string url, int status)
         {
             Title = title;
             Description = description;
@@ -29,11 +29,11 @@
             Isbn = isbn;
             Type = type;
             Url = url;
-            Status = 0;
+            Status = status;
         }
 
 
-        public Book(int id, string title, string description, string author, string isbn, string type, string url)
+        public Book(int id, string title, string description, string author, string isbn, string type, string url, int status)
         {
             Id = id;
             Title = title;
@@ -42,7 +42,7 @@
             Isbn = isbn;
             Type = type;
             Url = url;
-            Status = 0;
+            Status = status;
         }
 
     }

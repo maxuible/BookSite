@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using BookSite.Models;
 using BookSite.ViewModels;
 using System;
+using System.Collections.Generic;
 
 namespace BookSite.Controllers
 {
@@ -23,15 +24,16 @@ namespace BookSite.Controllers
             return View(book);
         }
 
-        public IActionResult ProcessEditBook(AddBookViewModel addBookViewModel, int id)
+        public IActionResult ProcessEditBook(AddBookViewModel addBookViewModel)
         {
             if (ModelState.IsValid)
             {
 
                 Book book = new Book(addBookViewModel.Title, addBookViewModel.Description, addBookViewModel.Author,
-                    addBookViewModel.Isbn, addBookViewModel.Type, addBookViewModel.Url);
+                    addBookViewModel.Isbn, addBookViewModel.Type, addBookViewModel.Url, addBookViewModel.Status);
 
                 
+
 
                 _repo.EditBookById(book, addBookViewModel.Id);
                 _repo.SaveChanges();
@@ -42,6 +44,15 @@ namespace BookSite.Controllers
 
             return View("AddBook", addBookViewModel);
 
+        }
+
+
+        public IActionResult Delete(int id)
+        {
+
+            _repo.DeleteBookById(id);
+            _repo.SaveChanges();
+            return Redirect("/List");
         }
     }
 }

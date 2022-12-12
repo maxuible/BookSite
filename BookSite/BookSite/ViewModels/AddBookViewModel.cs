@@ -23,8 +23,8 @@ namespace BookSite.ViewModels
 
         [Required(ErrorMessage = "Url is required")]
         public string Url { get; set; }
-
-
+        [Required(ErrorMessage = "Status is required")]
+        public int Status { get; set; }
 
     }
 }
